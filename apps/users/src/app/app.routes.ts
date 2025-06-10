@@ -48,8 +48,8 @@ export const appRoutes: Route[] = [
         canDeactivate: [canDeactivateFormComponent],
       },
       {
-        path: 'materials',
-        loadComponent: () => import('@users/materials').then((c) => c.UsersMaterialsComponent),
+        path: 'folders',
+        loadComponent: () => import('@users/feature-folders-list').then((c) => c.FoldersListContainerComponent),
       },
       {
         path: 'articles',

@@ -1,0 +1,11 @@
+<ng-container
+  *ngrxLet="{
+    folders: folders$,
+    status: status$,
+    errors: errors$
+  } as vm"
+>
+  <folders-list-ui [vm]="vm" (deleteFolder)="onDeleteFolder($event)" (redirectToEdit)="onRedirectToEdit($event)" />
+</ng-container>
+<!-- <create-folders-button></create-folders-button> -->
+
