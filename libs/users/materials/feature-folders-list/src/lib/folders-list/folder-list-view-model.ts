@@ -1,5 +1,5 @@
 import { DeepReadonly } from '@users/core/utils';
-import { FoldersVM } from '../../../../folder-vm';
+import { FoldersVM } from '../../../../feature-folders-create/folder-vm';
 import { FoldersErrors } from 'libs/users/materials/data-access/src/lib/+state/folders/folders.reducer';
 import { LoadingStatus } from '@users/core/data-access';
 

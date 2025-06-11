@@ -8,7 +8,7 @@ import { FoldersFacade } from 'libs/users/materials/data-access/src/lib/+state/f
 import { Router } from '@angular/router';
 import { LetDirective } from '@ngrx/component';
 import { FoldersDTO } from '@users/core/data-access';
-// import { CreateUsersButtonComponent } from '@users/feature-users-create';
+import { CreateFoldersButtonComponent } from '../../../../feature-folders-create/src/lib/create-folders-button/create-folders-button.component';
 
 @Component({
   selector: 'users-folders-list-container',
@@ -19,6 +19,7 @@ import { FoldersDTO } from '@users/core/data-access';
     MatButtonModule,
     MatDialogModule,
     LetDirective,
+    CreateFoldersButtonComponent,
   ],
   templateUrl: './folders-list-container.component.html',
   styleUrls: ['./folders-list-container.component.scss'],
@@ -44,5 +45,5 @@ export class FoldersListContainerComponent {
     });
   }
 
-  
+
 }

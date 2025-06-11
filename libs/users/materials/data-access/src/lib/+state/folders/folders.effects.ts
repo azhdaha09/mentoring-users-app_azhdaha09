@@ -14,9 +14,9 @@ export const folderEffects = createEffect(
 
     return actions$.pipe(
       ofType(FoldersActions.initFolders),
-      switchMap(() => 
+      switchMap(() =>
         apiService.get<FoldersDTO[]>('/folder').pipe(
-          map((folder) => 
+          map((folder) =>
             FoldersActions.loadFoldersSucces({
               folders: folder
             })
@@ -60,9 +60,9 @@ export const addFolder = createEffect(
       ofType(FoldersActions.addFolder),
       // delay(1500),
       switchMap(({ folderData }) =>
-        apiService.post<FoldersDTO, CreateFoldersDTO>('/users', folderData).pipe(
+        apiService.post<FoldersDTO, CreateFoldersDTO>('/folder', folderData).pipe(
           map((folder) => folder),
-          map((userEntity) => FoldersActions.addFolderSucces({ folderData: userEntity })),
+          map((folderDTO) => FoldersActions.addFolderSucces({ folderData: folderDTO })),
           catchError((error) => {
             console.error('Error', error);
             return of(FoldersActions.addFolderFailure({ error }));

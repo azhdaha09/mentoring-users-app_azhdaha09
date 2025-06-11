@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FoldersVM } from 'libs/users/materials/folder-vm';
+import { FoldersVM } from '../../../../feature-folders-create/folder-vm';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
@@ -12,7 +12,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 @Component({
   selector: 'folders-card',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatButtonModule, RouterModule, MatIconModule, MatTooltipModule, MatMenuModule],
+  imports: [CommonModule,
+    MatCardModule,
+    MatButtonModule,
+    RouterModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatMenuModule],
   templateUrl: './folders-card.component.html',
   styleUrls: ['./folders-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

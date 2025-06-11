@@ -2,11 +2,11 @@
   class="folder-card-wrapper"
   (click)="redirectToEditPage(false, $event)"
 >
-  
+
     <mat-card-content class="mat-card-content">
         <mat-icon>folder</mat-icon>
         <div>{{ folder.title }}</div>
-        <div>{{folder.created_at}}</div>
+        <div>{{ folder.created_at | date:'dd.MM.yyyy' }}</div>
     </mat-card-content>
 
   <mat-menu #menu="matMenu">

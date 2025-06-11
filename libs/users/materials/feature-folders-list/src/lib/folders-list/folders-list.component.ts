@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FoldersListVM } from './folder-list-view-model';
-import { FoldersVM } from 'libs/users/materials/folder-vm';
+import { FoldersVM } from '../../../../feature-folders-create/folder-vm';
 import { FoldersCardComponent } from '../folders-card/folders-card.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 

@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../dist/out-tsc",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "types": []
+  },
+  "exclude": [
+    "feature-folders-create/src/**/*.spec.ts",
+    "src/test-setup.ts",
+    "feature-folders-create/jest.config.ts",
+    "feature-folders-create/src/**/*.test.ts"
+  ],
+  "include": [
+    "feature-folders-create/src/**/*.ts"
+  ]
+}
