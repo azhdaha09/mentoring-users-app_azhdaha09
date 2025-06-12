@@ -1,10 +1,10 @@
-import { createAction, emptyProps, props } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 import { CreateMaterialsDTO, MaterialsDTO, LoadingStatus } from '@users/core/data-access';
 
 export const initMaterials = createAction('[Materials Page] Init');
 
-export const loadUsersSucces = createAction('[Materials/API] Load Materials Succes', props<{ materials: MaterialsDTO[] }>());
-export const loadUsersFailure = createAction('[Materials/Api] Load Materials Failed', props<{ error: any }>());
+export const loadMaterialsSucces = createAction('[Materials/API] Load Materials Succes', props<{ materials: MaterialsDTO[] }>());
+export const loadMaterialsFailure = createAction('[Materials/Api] Load Materials Failed', props<{ error: any }>());
 
 export const deleteMaterial = createAction('[Materials Page] Delete Material', props<{ id: number }>());
 export const deleteMaterialSucces = createAction('[Materials/Api] Delete Material Succes', props<{ id: number }>());

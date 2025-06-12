@@ -1,6 +1,5 @@
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import { createReducer, on, Action } from '@ngrx/store';
-
 import * as UsersActions from './users.actions';
 import { UsersEntity } from '@users/core/data-access';
 import { LoadingStatus } from '@users/core/data-access';
@@ -80,7 +79,7 @@ const reducer = createReducer(
   })),
   on(UsersActions.setUsersFilter, (state, { filter }) => ({
     ...state,
-    usersFilter: { name: filter }, 
+    usersFilter: { name: filter },
   })),
   on(UsersActions.addUserStoryPointsSuccess, (state, { userData }) =>
     usersAdapter.updateOne(

@@ -5,3 +5,5 @@ export * from './lib/users-dto.adapter';
 export * from './lib/users.entity';
 export * from './lib/materials-dto.model';
 export * from './lib/folder-dto.model'
+export * from './lib/materials.entity'
+export * from './lib/materials-dto.adapter'
